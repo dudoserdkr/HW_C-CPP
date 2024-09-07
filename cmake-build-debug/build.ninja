@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: c_cpp_homeworks
+# Project: c_cpp_homework
 # Configurations: Debug
 # =============================================================================
 
@@ -41,41 +41,35 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/ivyurievich/CLionProjects/c_cpp_homeworks/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target c_cpp_homeworks
+# Object build statements for EXECUTABLE target c_cpp_homework
 
 
 #############################################
-# Order-only phony target for c_cpp_homeworks
+# Order-only phony target for c_cpp_homework
 
-build cmake_object_order_depends_target_c_cpp_homeworks: phony || CMakeFiles/c_cpp_homeworks.dir
+build cmake_object_order_depends_target_c_cpp_homework: phony || CMakeFiles/c_cpp_homework.dir
 
-build CMakeFiles/c_cpp_homeworks.dir/main.cpp.o: CXX_COMPILER__c_cpp_homeworks_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/main.cpp || cmake_object_order_depends_target_c_cpp_homeworks
-  DEP_FILE = CMakeFiles/c_cpp_homeworks.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/c_cpp_homeworks.dir
-  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homeworks.dir
-
-build CMakeFiles/c_cpp_homeworks.dir/HW_1_C/t01_12.c.o: C_COMPILER__c_cpp_homeworks_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/HW_1_C/t01_12.c || cmake_object_order_depends_target_c_cpp_homeworks
-  DEP_FILE = CMakeFiles/c_cpp_homeworks.dir/HW_1_C/t01_12.c.o.d
+build CMakeFiles/c_cpp_homework.dir/HW_1_C/t01_17.c.o: C_COMPILER__c_cpp_homework_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/HW_1_C/t01_17.c || cmake_object_order_depends_target_c_cpp_homework
+  DEP_FILE = CMakeFiles/c_cpp_homework.dir/HW_1_C/t01_17.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/c_cpp_homeworks.dir
-  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homeworks.dir/HW_1_C
+  OBJECT_DIR = CMakeFiles/c_cpp_homework.dir
+  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homework.dir/HW_1_C
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target c_cpp_homeworks
+# Link build statements for EXECUTABLE target c_cpp_homework
 
 
 #############################################
-# Link the executable c_cpp_homeworks
+# Link the executable c_cpp_homework
 
-build c_cpp_homeworks: CXX_EXECUTABLE_LINKER__c_cpp_homeworks_Debug CMakeFiles/c_cpp_homeworks.dir/main.cpp.o CMakeFiles/c_cpp_homeworks.dir/HW_1_C/t01_12.c.o
+build c_cpp_homework: C_EXECUTABLE_LINKER__c_cpp_homework_Debug CMakeFiles/c_cpp_homework.dir/HW_1_C/t01_17.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
-  OBJECT_DIR = CMakeFiles/c_cpp_homeworks.dir
+  OBJECT_DIR = CMakeFiles/c_cpp_homework.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = c_cpp_homeworks
-  TARGET_PDB = c_cpp_homeworks.dbg
+  TARGET_FILE = c_cpp_homework
+  TARGET_PDB = c_cpp_homework.dbg
 
 
 #############################################
@@ -111,7 +105,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/ivyurievich/CLionProjects/c_cpp_homeworks/cmake-build-debug
 
-build all: phony c_cpp_homeworks
+build all: phony c_cpp_homework
 
 # =============================================================================
 # Built-in targets

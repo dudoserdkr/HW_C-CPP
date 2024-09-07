@@ -33,6 +33,7 @@ CMakeSettings.json
 *.bin
 *.dSYM/
 *.stackdump
+*.executable
 
 # macOS
 .DS_Store
@@ -52,3 +53,6 @@ Icon?
 *.run.xml
 *.bak
 *.swp
+
+t01_12
+t01_13
