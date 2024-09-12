@@ -42,7 +42,7 @@ CMakeSettings.json
 Icon?
 
 # Logs and coverage reports
-*.log
+*.logпше
 *.tmp
 *.coverage
 *.gcno
