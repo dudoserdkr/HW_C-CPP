@@ -35,23 +35,6 @@ bool dot_inside_square(int square[4][2], int ptr[2][2]) {
     return false;
 }
 
-void generate_square(int* x1, int* y1, int* x2, int* y2, int* x3, int* y3, int* x4, int* y4, int side_length) {
-    int start_x = rand() % 10;
-    int start_y = rand() % 10;
-
-    *x1 = start_x;
-    *y1 = start_y;
-
-    *x2 = start_x;
-    *y2 = start_y + side_length;
-
-    *x3 = start_x + side_length;
-    *y3 = start_y + side_length;
-
-    *x4 = start_x + side_length;
-    *y4 = start_y;
-}
-
 int main() {
     int ax1, ay1, ax2, ay2, ax3, ay3, ax4, ay4;
     int bx1, by1, bx2, by2, bx3, by3, bx4, by4;
