@@ -49,11 +49,11 @@ cmake_ninja_workdir = /Users/ivyurievich/CLionProjects/c_cpp_homeworks/cmake-bui
 
 build cmake_object_order_depends_target_c_cpp_homework: phony || CMakeFiles/c_cpp_homework.dir
 
-build CMakeFiles/c_cpp_homework.dir/HW_3_C/t03_23B.c.o: C_COMPILER__c_cpp_homework_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/HW_3_C/t03_23B.c || cmake_object_order_depends_target_c_cpp_homework
-  DEP_FILE = CMakeFiles/c_cpp_homework.dir/HW_3_C/t03_23B.c.o.d
+build CMakeFiles/c_cpp_homework.dir/HW_4_C/t04_27d.c.o: C_COMPILER__c_cpp_homework_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/HW_4_C/t04_27d.c || cmake_object_order_depends_target_c_cpp_homework
+  DEP_FILE = CMakeFiles/c_cpp_homework.dir/HW_4_C/t04_27d.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/c_cpp_homework.dir
-  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homework.dir/HW_3_C
+  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homework.dir/HW_4_C
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/c_cpp_homework.dir/HW_3_C/t03_23B.c.o: C_COMPILER__c_cpp_homewo
 #############################################
 # Link the executable c_cpp_homework
 
-build c_cpp_homework: C_EXECUTABLE_LINKER__c_cpp_homework_Debug CMakeFiles/c_cpp_homework.dir/HW_3_C/t03_23B.c.o
+build c_cpp_homework: C_EXECUTABLE_LINKER__c_cpp_homework_Debug CMakeFiles/c_cpp_homework.dir/HW_4_C/t04_27d.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   OBJECT_DIR = CMakeFiles/c_cpp_homework.dir
   POST_BUILD = :
