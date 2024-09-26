@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(c_cpp_homework
 #
-        HW_5_C/t05_16г.c
+        HW_6_C/t06_22.cpp
 )
