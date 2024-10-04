@@ -4,6 +4,5 @@ project(c_cpp_homework)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(c_cpp_homework
-#
-        HW_7_C/t07_9в.c
+        HW_8_C/t13.c
 )
