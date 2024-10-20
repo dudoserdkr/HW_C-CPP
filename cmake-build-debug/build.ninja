@@ -49,11 +49,11 @@ cmake_ninja_workdir = /Users/ivyurievich/CLionProjects/c_cpp_homeworks/cmake-bui
 
 build cmake_object_order_depends_target_c_cpp_homework: phony || CMakeFiles/c_cpp_homework.dir
 
-build CMakeFiles/c_cpp_homework.dir/HW_11_C/t11_12б.c.o: C_COMPILER__c_cpp_homework_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/HW_11_C/t11_12б.c || cmake_object_order_depends_target_c_cpp_homework
-  DEP_FILE = CMakeFiles/c_cpp_homework.dir/HW_11_C/t11_12б.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+build CMakeFiles/c_cpp_homework.dir/HW_12_CPP/homework/t12_06.cpp.o: CXX_COMPILER__c_cpp_homework_unscanned_Debug /Users/ivyurievich/CLionProjects/c_cpp_homeworks/HW_12_CPP/homework/t12_06.cpp || cmake_object_order_depends_target_c_cpp_homework
+  DEP_FILE = CMakeFiles/c_cpp_homework.dir/HW_12_CPP/homework/t12_06.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/c_cpp_homework.dir
-  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homework.dir/HW_11_C
+  OBJECT_FILE_DIR = CMakeFiles/c_cpp_homework.dir/HW_12_CPP/homework
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/c_cpp_homework.dir/HW_11_C/t11_12б.c.o: C_COMPILER__c_cpp_home
 #############################################
 # Link the executable c_cpp_homework
 
-build c_cpp_homework: C_EXECUTABLE_LINKER__c_cpp_homework_Debug CMakeFiles/c_cpp_homework.dir/HW_11_C/t11_12б.c.o
+build c_cpp_homework: CXX_EXECUTABLE_LINKER__c_cpp_homework_Debug CMakeFiles/c_cpp_homework.dir/HW_12_CPP/homework/t12_06.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/c_cpp_homework.dir
   POST_BUILD = :
