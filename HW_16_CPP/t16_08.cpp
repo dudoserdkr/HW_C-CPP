@@ -204,3 +204,112 @@ public:
     }
 };
 
+class Polygon : public Figure {
+    vector<Dot> vertexes;
+
+    void init_vertexes(const vector<Dot> &points) {
+        vertexes = points;
+    }
+
+    void sort_vertexes() {
+        vector<Dot> sorted(vertexes.size());
+        sorted[0] = vertexes[0];
+
+        vector<bool> visited(vertexes.size(), false);
+        visited[0] = true;
+
+        for (size_t i = 0; i < vertexes.size() - 1; i++) {
+            int min_index = -1;
+            double min_distance = numeric_limits<double>::max();
+
+            for (size_t j = 0; j < vertexes.size(); j++) {
+                if (!visited[j]) {
+                    double curr_distance = calc_distance(sorted[i], vertexes[j]);
+
+                    if (curr_distance < min_distance) {
+                        min_index = j;
+                        min_distance = curr_distance;
+                    }
+                }
+            }
+            visited[min_index] = true;
+            sorted[i + 1] = vertexes[min_index];
+        }
+
+        vertexes = sorted;
+    }
+
+    static double inline calc_distance(const Dot &a, const Dot &b) {
+        return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
+    }
+
+    static double cross_product(const Dot &a, const Dot &b, const Dot &c) {
+        return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+    }
+
+public:
+    Polygon(const vector<Dot> &points) {
+        init_vertexes(points);
+        sort_vertexes();
+    }
+
+    [[nodiscard]] bool is_convex() const {
+        bool is_positive = cross_product(vertexes[0], vertexes[1], vertexes[2]) > 0;
+
+        for (size_t i = 1; i < vertexes.size(); i++) {
+            bool current_positive = cross_product(vertexes[i], vertexes[(i + 1) % vertexes.size()], vertexes[(i + 2) % vertexes.size()]) > 0;
+
+            if (current_positive != is_positive) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    [[nodiscard]] double inline area() const override {
+        double area = 0;
+
+        for (size_t i = 0; i < vertexes.size(); i++) {
+            area += vertexes[i].x * vertexes[(i + 1) % vertexes.size()].y - vertexes[(i + 1) % vertexes.size()].x * vertexes[i].y;
+        }
+        return abs(area) / 2;
+    }
+
+    [[nodiscard]] double inline perimeter() const override {
+        double perimeter = 0;
+
+        for (size_t i = 0; i < vertexes.size(); i++) {
+            perimeter += calc_distance(vertexes[i], vertexes[(i + 1) % vertexes.size()]);
+        }
+        return perimeter;
+    }
+};
+
+void test_figures() {
+    // Test Rectangle
+    Rectangle rect(0, 0, 4, 3);
+    cout << "Rectangle Area: " << rect.area() << endl;
+    cout << "Rectangle Perimeter: " << rect.perimeter() << endl;
+
+    // Test Triangle
+    Triangle tri(0, 0, 3, 0, 3, 4);
+    cout << "Triangle Area: " << tri.area() << endl;
+    cout << "Triangle Perimeter: " << tri.perimeter() << endl;
+
+    // Test Pentagon
+    Pentagon pent(0, 0, 2, 4, 4, 3, 3, 1, 1, -1);
+    cout << "Pentagon Area: " << pent.area() << endl;
+    cout << "Pentagon Perimeter: " << pent.perimeter() << endl;
+    cout << "Pentagon is Convex: " << (pent.is_convex() ? "Yes" : "No") << endl;
+
+    // Test Polygon (Hexagon)
+    vector<Dot> hexagon_points = {{0, 0}, {2, 0}, {3, 1}, {2, 3}, {0, 4}, {-1, 2}};
+    Polygon hexagon(hexagon_points);
+    cout << "Hexagon Area: " << hexagon.area() << endl;
+    cout << "Hexagon Perimeter: " << hexagon.perimeter() << endl;
+    cout << "Hexagon is Convex: " << (hexagon.is_convex() ? "Yes" : "No") << endl;
+}
+
+int main() {
+    test_figures();
+}
