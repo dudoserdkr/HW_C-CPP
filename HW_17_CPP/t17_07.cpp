@@ -146,7 +146,7 @@ public:
 
     void delete_number(int n, int line_n) {
 
-        assert(n < numbers_num || line_n < lines_num);
+        assert(n <= numbers_num || line_n <= lines_num);
 
         ifstream file = open_file_for_input();
 
